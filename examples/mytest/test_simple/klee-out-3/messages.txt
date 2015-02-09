@@ -1,0 +1,7 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: i32*
+KLEE: find a pointer type

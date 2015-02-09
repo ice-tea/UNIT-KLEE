@@ -1,0 +1,158 @@
+version: 1
+creator: klee
+pid: 18826
+cmd: struct.o
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=/home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_struct_nested/klee-out-13/assembly.ll
+fn=get_sign
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_struct_nested/struct.c
+32 15 1 0 0 0 15 0 0 0 25 0 0 0 0 
+33 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+34 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+35 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+36 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+37 15 1 1 0 0 1 0 0 0 0 2 2 0 2923 
+40 16 1 0 0 0 1 0 0 0 0 0 0 0 0 
+41 16 1 0 0 0 1 0 0 0 0 0 0 0 0 
+44 18 1 0 0 0 1 0 0 0 0 0 0 0 0 
+45 18 1 0 0 0 1 0 0 0 0 0 0 0 0 
+46 18 1 0 0 0 1 0 0 0 0 0 0 0 0 
+47 18 1 0 0 0 1 0 0 0 0 0 0 0 0 
+48 18 1 0 0 0 1 0 0 0 0 0 0 0 0 
+49 18 1 1 0 0 1 0 0 0 0 1 1 0 11853 
+52 19 1 0 0 0 1 0 0 0 0 0 0 0 0 
+53 19 1 0 0 0 1 0 0 0 0 0 0 0 0 
+56 21 1 0 0 0 1 0 0 0 0 0 0 0 0 
+57 21 1 0 0 0 1 0 0 0 0 0 0 0 0 
+60 16 1 0 0 0 3 0 0 0 0 0 0 0 0 
+61 16 1 0 0 0 3 0 0 0 0 0 0 0 0 
+62 16 1 0 0 0 3 0 0 0 0 0 0 0 0 
+63 16 1 0 0 0 3 0 0 0 0 0 0 0 0 
+fn=main
+fl=
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_struct_nested/struct.c
+74 26 1 0 0 0 1 0 0 0 0 0 0 0 0 
+75 26 1 0 0 0 1 0 0 0 0 0 0 0 0 
+76 31 1 0 0 0 1 0 0 0 0 0 0 0 0 
+77 31 1 0 0 0 1 0 0 0 0 0 0 0 0 
+78 31 1 0 0 0 1 0 0 0 0 0 0 0 0 
+79 31 1 0 0 0 1 0 0 0 0 0 0 0 0 
+80 31 1 0 0 0 1 0 0 0 0 0 0 0 0 
+81 31 1 0 0 0 1 0 0 0 0 0 0 0 0 
+82 31 1 0 0 0 1 0 0 0 0 0 0 0 0 
+cfn=get_sign
+calls=1 0 0
+82 31 21 2 0 0 40 0 0 0 0 3 3 0 14776 
+83 31 1 0 0 0 3 0 0 0 0 0 0 0 0 
+84 31 1 0 0 0 3 0 0 0 0 0 0 0 0 
+85 31 1 0 0 0 3 0 0 0 0 0 0 0 0 
+86 31 1 0 0 0 3 0 0 0 0 0 0 0 0 
+87 31 1 0 0 0 3 0 0 0 0 0 0 0 0 
+fn=klee_div_zero_check
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_div_zero_check.c
+94 13 0 0 0 0 0 0 0 0 1 0 0 0 0 
+95 13 0 0 0 0 0 0 0 0 1 0 0 0 0 
+98 14 0 0 0 0 0 0 0 0 1 0 0 0 0 
+99 14 0 0 0 0 0 0 0 0 0 0 0 0 0 
+102 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fn=klee_int
+fl=
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_int.c
+112 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+113 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+114 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+115 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fn=klee_overshift_check
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_overshift_check.c
+120 21 0 0 0 0 0 0 0 0 1 0 0 0 0 
+121 21 0 0 0 0 0 0 0 0 1 0 0 0 0 
+124 27 0 0 0 0 0 0 0 0 1 0 0 0 0 
+125 27 0 0 0 0 0 0 0 0 0 0 0 0 0 
+128 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fn=klee_range
+fl=
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_range.c
+134 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+135 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+138 17 0 0 0 0 0 0 0 0 1 0 0 0 0 
+139 17 0 0 0 0 0 0 0 0 0 0 0 0 0 
+142 19 0 0 0 0 0 0 0 0 1 0 0 0 0 
+143 19 0 0 0 0 0 0 0 0 1 0 0 0 0 
+144 19 0 0 0 0 0 0 0 0 1 0 0 0 0 
+147 22 0 0 0 0 0 0 0 0 1 0 0 0 0 
+148 22 0 0 0 0 0 0 0 0 1 0 0 0 0 
+149 25 0 0 0 0 0 0 0 0 1 0 0 0 0 
+150 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+151 25 0 0 0 0 0 0 0 0 1 0 0 0 0 
+154 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+155 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+156 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+157 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+160 28 0 0 0 0 0 0 0 0 1 0 0 0 0 
+161 28 0 0 0 0 0 0 0 0 1 0 0 0 0 
+162 28 0 0 0 0 0 0 0 0 1 0 0 0 0 
+163 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+164 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+165 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+166 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+167 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+170 32 0 0 0 0 0 0 0 0 1 0 0 0 0 
+171 32 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fl=
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_range.c
+175 20 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fn=mempcpy
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/mempcpy.c
+182 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+183 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fl=
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/mempcpy.c
+189 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+190 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fl=
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/mempcpy.c
+193 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fl=
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+0 0 1 0 0 0 15 0 0 0 25 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/mempcpy.c
+201 17 0 0 0 0 0 0 0 0 1 0 0 0 0 

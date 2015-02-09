@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_array2/two_input.c:25: wrong size given to klee_make_symbolic[_name]
+KLEE: NOTE: now ignoring this error at this location

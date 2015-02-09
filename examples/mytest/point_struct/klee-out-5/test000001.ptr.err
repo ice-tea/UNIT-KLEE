@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/bo/KleeWorkspace/klee/examples/mytest/point_struct/list.c
+Line: 14
+assembly.ll line: 32
+Stack: 
+	#000000032 in get_sign (n=37475552) at /home/bo/KleeWorkspace/klee/examples/mytest/point_struct/list.c:14
+	#100000082 in main () at /home/bo/KleeWorkspace/klee/examples/mytest/point_struct/list.c:29
+Info: 
+	address: (ReadLSB w64 8 node1)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 37474912 of size 4
+		MO17[4] allocated at main():  %retval = alloca i32

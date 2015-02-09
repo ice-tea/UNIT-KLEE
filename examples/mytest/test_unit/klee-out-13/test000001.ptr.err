@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_unit/bubble2.c
+Line: 10
+assembly.ll line: 43
+Stack: 
+	#000000043 in bubble (v=15427616) at /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_unit/bubble2.c:10
+	#100000109 in main () at /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_unit/bubble2.c:23
+Info: 
+	address: 15427628
+	next: object at 15428496 of size 8
+		MO20[8] allocated at bubble():  %v_addr = alloca i32*, align 8
+	prev: object at 15427616 of size 12
+		MO17[12] allocated at main():  %v = alloca [3 x i32]

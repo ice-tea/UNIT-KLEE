@@ -1,0 +1,21 @@
+/*
+ * First KLEE tutorial: testing two input
+ */
+
+#include <klee/klee.h>
+
+int fun2(int x, int y){
+   if(x>10)
+      x = x+y;
+   else
+      y = x+y;
+   return 0;
+}
+
+int main() {
+  int a;
+  int b;
+  klee_make_symbolic(&a, sizeof(a), "a");
+  klee_make_symbolic(&b, sizeof(b), "b");
+  return fun2(a,b);
+} 

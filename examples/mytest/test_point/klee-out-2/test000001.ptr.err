@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/bo/KleeWorkspace/klee/examples/mytest/test_point/two_input.c
+Line: 8
+assembly.ll line: 24
+Stack: 
+	#000000024 in get_sign (x) at /home/bo/KleeWorkspace/klee/examples/mytest/test_point/two_input.c:8
+	#100000066 in main () at /home/bo/KleeWorkspace/klee/examples/mytest/test_point/two_input.c:21
+Info: 
+	address: (ReadLSB w64 0 p)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 43112992 of size 4
+		MO17[4] allocated at main():  %retval = alloca i32

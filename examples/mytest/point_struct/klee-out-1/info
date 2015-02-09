@@ -1,0 +1,21 @@
+klee list.o
+PID: 9835
+Started: 2014-10-22 19:32:15
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2014-10-22 19:32:19
+Elapsed: 00:00:04
+KLEE: done: explored paths = 73
+KLEE: done: avg. constructs per query = 469
+KLEE: done: total queries = 191
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 191
+KLEE: done: query cex = 191
+
+KLEE: done: total instructions = 1105
+KLEE: done: completed paths = 73
+KLEE: done: generated tests = 73

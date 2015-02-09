@@ -1,0 +1,9 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: [2 x { i32, i32 }]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: [2 x { i32, i32 }]
+KLEE: find an array type
+KLEE: looking for

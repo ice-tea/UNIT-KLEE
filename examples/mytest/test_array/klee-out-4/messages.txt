@@ -1,0 +1,36 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: [3 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: [3 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: [3 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: [3 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for

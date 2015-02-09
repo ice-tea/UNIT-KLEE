@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/bo/KleeWorkspace/klee/examples/mytest/test_point/two_input.c:8: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

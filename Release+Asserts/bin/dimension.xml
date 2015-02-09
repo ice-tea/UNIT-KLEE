@@ -1,0 +1,31 @@
+<dimension>
+    <base>
+        <node name="m">
+            <trans name="km" coefficient="1000" offset="0"></trans>
+            <trans name="cm" coefficient="0.01" offset="0"></trans>
+            <trans name="mm" coefficient="0.001" offset="0"></trans>
+        </node>
+        <node name="kg">
+            <trans name="g" coefficient="0.001" offset="0"></trans>
+        </node>
+        <node name="s">
+            <trans name="ms" coefficient="0.001" offset="0"></trans>
+        </node>
+        <node name="A">
+            <trans name="mA" coefficient="0.001" offset="0"></trans>
+        </node>
+        <node name="K">
+            <trans name="c" coefficient="1" offset="273.15"></trans>
+            <trans name="F" coefficient="1.8" offset="-459.67"></trans>
+        </node>
+        <node name="mol">
+        </node>
+        <node name="cd">
+        </node>
+    </base>
+    <extends>
+        <node name="N" descript="kg*m/s/s"/>
+        <node name="J" descript="kg*m*m/s/s"/>
+        <node name="G" descript="N/kg"/>
+    </extends>
+</dimension>

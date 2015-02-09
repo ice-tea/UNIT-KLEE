@@ -1,0 +1,150 @@
+version: 1
+creator: klee
+pid: 2933
+cmd: two_input.o
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=/home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_simple/klee-out-1/assembly.ll
+fn=get_sign
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_simple/two_input.c
+26 8 1 0 0 0 13 0 0 0 23 0 0 0 0 
+27 8 1 0 0 0 1 0 0 0 0 0 0 0 0 
+28 8 1 0 0 0 1 0 0 0 0 0 0 0 0 
+29 8 1 1 0 0 1 0 0 0 0 2 2 0 6551 
+32 9 1 0 0 0 1 0 0 0 0 0 0 0 0 
+33 9 1 0 0 0 1 0 0 0 0 0 0 0 0 
+36 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+37 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+38 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+39 10 1 1 0 0 1 0 0 0 0 1 1 0 14971 
+42 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+43 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+46 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+47 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+50 9 1 0 0 0 3 0 0 0 0 0 0 0 0 
+51 9 1 0 0 0 3 0 0 0 0 0 0 0 0 
+52 9 1 0 0 0 3 0 0 0 0 0 0 0 0 
+53 9 1 0 0 0 3 0 0 0 0 0 0 0 0 
+fn=main
+fl=
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_simple/two_input.c
+65 18 1 0 0 0 1 0 0 0 0 0 0 0 0 
+66 18 1 0 0 0 1 0 0 0 0 0 0 0 0 
+67 19 1 0 0 0 1 0 0 0 0 0 0 0 0 
+68 19 1 0 0 0 1 0 0 0 0 0 0 0 0 
+69 20 1 0 0 0 1 0 0 0 0 0 0 0 0 
+70 20 1 0 0 0 1 0 0 0 0 0 0 0 0 
+71 20 1 0 0 0 1 0 0 0 0 0 0 0 0 
+cfn=get_sign
+calls=1 0 0
+71 20 17 2 0 0 33 0 0 0 0 3 3 0 21522 
+72 20 1 0 0 0 3 0 0 0 0 0 0 0 0 
+73 20 1 0 0 0 3 0 0 0 0 0 0 0 0 
+74 20 1 0 0 0 3 0 0 0 0 0 0 0 0 
+75 20 1 0 0 0 3 0 0 0 0 0 0 0 0 
+76 20 1 0 0 0 3 0 0 0 0 0 0 0 0 
+fn=klee_div_zero_check
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_div_zero_check.c
+83 13 0 0 0 0 0 0 0 0 1 0 0 0 0 
+84 13 0 0 0 0 0 0 0 0 1 0 0 0 0 
+87 14 0 0 0 0 0 0 0 0 1 0 0 0 0 
+88 14 0 0 0 0 0 0 0 0 0 0 0 0 0 
+91 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fn=klee_int
+fl=
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_int.c
+101 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+102 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+103 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+104 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fn=klee_overshift_check
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_overshift_check.c
+109 21 0 0 0 0 0 0 0 0 1 0 0 0 0 
+110 21 0 0 0 0 0 0 0 0 1 0 0 0 0 
+113 27 0 0 0 0 0 0 0 0 1 0 0 0 0 
+114 27 0 0 0 0 0 0 0 0 0 0 0 0 0 
+117 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fn=klee_range
+fl=
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_range.c
+123 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+124 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+127 17 0 0 0 0 0 0 0 0 1 0 0 0 0 
+128 17 0 0 0 0 0 0 0 0 0 0 0 0 0 
+131 19 0 0 0 0 0 0 0 0 1 0 0 0 0 
+132 19 0 0 0 0 0 0 0 0 1 0 0 0 0 
+133 19 0 0 0 0 0 0 0 0 1 0 0 0 0 
+136 22 0 0 0 0 0 0 0 0 1 0 0 0 0 
+137 22 0 0 0 0 0 0 0 0 1 0 0 0 0 
+138 25 0 0 0 0 0 0 0 0 1 0 0 0 0 
+139 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+140 25 0 0 0 0 0 0 0 0 1 0 0 0 0 
+143 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+144 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+145 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+146 26 0 0 0 0 0 0 0 0 1 0 0 0 0 
+149 28 0 0 0 0 0 0 0 0 1 0 0 0 0 
+150 28 0 0 0 0 0 0 0 0 1 0 0 0 0 
+151 28 0 0 0 0 0 0 0 0 1 0 0 0 0 
+152 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+153 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+154 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+155 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+156 29 0 0 0 0 0 0 0 0 1 0 0 0 0 
+159 32 0 0 0 0 0 0 0 0 1 0 0 0 0 
+160 32 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fl=
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/klee_range.c
+164 20 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fn=mempcpy
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/mempcpy.c
+171 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+172 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fl=
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/mempcpy.c
+178 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+179 16 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fl=
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/mempcpy.c
+182 15 0 0 0 0 0 0 0 0 1 0 0 0 0 
+fl=
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+0 0 1 0 0 0 13 0 0 0 23 0 0 0 0 
+fl=/home/bo/workspace/MyKlee/klee-copy/runtime/Intrinsic/mempcpy.c
+190 17 0 0 0 0 0 0 0 0 1 0 0 0 0 

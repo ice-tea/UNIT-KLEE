@@ -1,0 +1,98 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: { i32, { i32, i32, \2* }, { i32, i32, \2 }*, \2 }*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: { i32, { i32, i32, \2* }, { i32, i32, \2 }*, { i32, { i32, i32, \2* }, { i32, i32, \2 }*, \2 }* }
+KLEE: size is 40
+KLEE: find a struct type
+KLEE: looking for
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }
+KLEE: size is 36
+KLEE: find a struct type
+KLEE: looking for
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }
+KLEE: size is 28
+KLEE: find a struct type
+KLEE: looking for
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }
+KLEE: size is 20
+KLEE: find a struct type
+KLEE: looking for
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }
+KLEE: size is 12
+KLEE: find a struct type
+KLEE: looking for
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: { i32, i32, \2* }
+KLEE: size is 4
+KLEE: find a struct type
+KLEE: looking for
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: find a primitive with 4 size

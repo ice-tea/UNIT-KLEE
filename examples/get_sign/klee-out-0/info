@@ -1,0 +1,21 @@
+../../Release+Asserts/bin/klee get_sign.o
+PID: 2371
+Started: 2014-08-28 11:38:48
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2014-08-28 11:38:48
+Elapsed: 00:00:00
+KLEE: done: explored paths = 3
+KLEE: done: avg. constructs per query = 14
+KLEE: done: total queries = 3
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 3
+KLEE: done: query cex = 3
+
+KLEE: done: total instructions = 52
+KLEE: done: completed paths = 3
+KLEE: done: generated tests = 3

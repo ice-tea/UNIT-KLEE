@@ -1,0 +1,14 @@
+KLEE: begin lines
+KLEE: /home/bo/workspace/MyKlee/klee-copy/examples/unittest/test2.c
+KLEE: 8
+KLEE: 9
+KLEE: 11
+KLEE: 12
+KLEE: 18
+KLEE: 19
+KLEE: 21
+KLEE: 22
+KLEE: 30
+KLEE: 
+KLEE: 0
+KLEE: end lines

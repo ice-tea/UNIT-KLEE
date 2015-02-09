@@ -1,0 +1,36 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: { i32, i32 }*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: { i32, i32 }
+KLEE: size is 8
+KLEE: find an aggregatetype
+KLEE: looking for
+KLEE: i32
+KLEE: i32
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: { i32, i32 }*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: { i32, i32 }
+KLEE: size is 8
+KLEE: find an aggregatetype
+KLEE: looking for
+KLEE: i32
+KLEE: i32
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: { i32, i32 }*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: { i32, i32 }
+KLEE: size is 8
+KLEE: find an aggregatetype
+KLEE: looking for
+KLEE: i32
+KLEE: i32

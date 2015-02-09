@@ -1,0 +1,21 @@
+klee two_input.o
+PID: 15139
+Started: 2014-11-10 11:28:49
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2014-11-10 11:28:49
+Elapsed: 00:00:00
+KLEE: done: explored paths = 3
+KLEE: done: avg. constructs per query = 24
+KLEE: done: total queries = 3
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 3
+KLEE: done: query cex = 3
+
+KLEE: done: total instructions = 60
+KLEE: done: completed paths = 3
+KLEE: done: generated tests = 3

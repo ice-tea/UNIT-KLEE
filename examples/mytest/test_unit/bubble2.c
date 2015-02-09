@@ -1,0 +1,25 @@
+#define MAXL 6
+
+
+void bubble( int v[MAXL])
+{
+	int i, j, k;
+	int tmp;
+	for ( i = MAXL; i > 1; --i )
+		for ( j = 1; j < i; ++j )
+			if ( v[j] > v[j + 1] )	/* compare */
+			{
+				k = v[j];	/* exchange */
+				v[j] = v[j + 1];
+				v[j + 1] = k;
+			}
+}
+
+
+int main()
+{
+	int v[MAXL];
+	klee_make_symbolic(&v, sizeof(v), "v");
+	bubble(v);
+	return 0;
+}

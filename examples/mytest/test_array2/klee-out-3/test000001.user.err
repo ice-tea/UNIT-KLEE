@@ -1,0 +1,6 @@
+Error: wrong size given to klee_make_symbolic[_name]
+File: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_array2/two_input.c
+Line: 25
+assembly.ll line: 86
+Stack: 
+	#000000086 in main () at /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_array2/two_input.c:25

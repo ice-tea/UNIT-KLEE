@@ -1,0 +1,42 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i32
+KLEE: In addSymbolicRef
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i32

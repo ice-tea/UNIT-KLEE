@@ -1,0 +1,31 @@
+KLEE: ERROR: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_unit/bubble2.c:10: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [4 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [4 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: begin lines
+KLEE: end lines

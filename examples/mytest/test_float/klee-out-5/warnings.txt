@@ -1,0 +1,1 @@
+KLEE: WARNING ONCE: silently concretizing (reason: floating point) expression (ReadLSB w32 0 a) to value 0 (/home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_float/two_input.c:8)

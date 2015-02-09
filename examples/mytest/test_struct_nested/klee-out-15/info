@@ -1,0 +1,21 @@
+klee struct.o
+PID: 26493
+Started: 2014-11-10 23:59:27
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2014-11-10 23:59:27
+Elapsed: 00:00:00
+KLEE: done: explored paths = 4
+KLEE: done: avg. constructs per query = 25
+KLEE: done: total queries = 4
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 4
+KLEE: done: query cex = 4
+
+KLEE: done: total instructions = 87
+KLEE: done: completed paths = 4
+KLEE: done: generated tests = 4

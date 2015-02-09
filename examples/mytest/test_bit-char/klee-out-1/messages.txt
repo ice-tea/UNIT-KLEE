@@ -1,0 +1,48 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: i8*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i8
+KLEE: find a primitive with 1 size
+KLEE: In addSymbolicRef
+KLEE: i8*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i8
+KLEE: find a primitive with 1 size
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: i8*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i8
+KLEE: find a primitive with 1 size
+KLEE: In addSymbolicRef
+KLEE: i8*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i8
+KLEE: find a primitive with 1 size
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: i8*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i8
+KLEE: find a primitive with 1 size
+KLEE: In addSymbolicRef
+KLEE: i8*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: i8
+KLEE: find a primitive with 1 size

@@ -1,0 +1,18 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: [2 x { i32, { i32, i32, \2* }, i8 }]*
+KLEE: LB----> getting Memory Object
+
+KLEE: { i32, i32, \2 }*
+KLEE: LB----> getting Memory Object
+
+KLEE: [2 x { i32, { i32, i32, \2* }, i8 }]*
+KLEE: LB----> getting Memory Object
+
+KLEE: { i32, i32, \2 }*
+KLEE: LB----> getting Memory Object
+
+KLEE: [2 x { i32, { i32, i32, \2* }, i8 }]*
+KLEE: LB----> getting Memory Object
+
+KLEE: { i32, i32, \2 }*

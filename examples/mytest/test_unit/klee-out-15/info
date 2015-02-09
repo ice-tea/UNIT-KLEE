@@ -1,0 +1,21 @@
+klee -no-externals -cppfname=get_sign bubble2.o
+PID: 26874
+Started: 2015-01-26 16:31:23
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2015-01-26 16:31:23
+Elapsed: 00:00:00
+KLEE: done: explored paths = 16
+KLEE: done: avg. constructs per query = 73
+KLEE: done: total queries = 16
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 16
+KLEE: done: query cex = 16
+
+KLEE: done: total instructions = 1011
+KLEE: done: completed paths = 16
+KLEE: done: generated tests = 1

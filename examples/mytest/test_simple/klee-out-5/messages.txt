@@ -1,0 +1,81 @@
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: begin lines
+KLEE: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_simple/two_input.c
+KLEE: 9
+KLEE: 13
+KLEE: 20
+KLEE: end lines
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: begin lines
+KLEE: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_simple/two_input.c
+KLEE: 8
+KLEE: 9
+KLEE: 18
+KLEE: 19
+KLEE: 20
+KLEE: 
+KLEE: 0
+KLEE: end lines
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: begin lines
+KLEE: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_simple/two_input.c
+KLEE: 10
+KLEE: 11
+KLEE: end lines
