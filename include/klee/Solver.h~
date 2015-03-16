@@ -12,8 +12,8 @@
 
 #include "klee/Expr.h"
 //libo
-#include "klee/dimension.h"
-#include "klee/tinyxml.h"
+//#include "klee/dimension.h"
+//#include "klee/tinyxml.h"
 //-libo
 
 #include <vector>
@@ -53,14 +53,14 @@ namespace klee {
     Solver(const Solver&);
     void operator=(const Solver&);
   
-  //libo
+  /*libo
   private:
     MyDim::dimension dim;
     MyDim::GauseSolver gSolver;
   public:
     void addCons(){std::cout<<"add!\n";}
     void getDim(){std::cout<<"get Dimension!\n";}
-  //-libo
+  */-libo
   public:
     enum Validity {
       True = 1,

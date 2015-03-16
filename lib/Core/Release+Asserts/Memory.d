@@ -1,12 +1,12 @@
-/home/bo/workspace/MyKlee/klee-copy/lib/Core/Release+Asserts/Memory.o \
- /home/bo/workspace/MyKlee/klee-copy/lib/Core/Release+Asserts/Memory.d: \
+/home/bo/workspace/klee-g/UNIT-KLEE/lib/Core/Release+Asserts/Memory.o \
+ /home/bo/workspace/klee-g/UNIT-KLEE/lib/Core/Release+Asserts/Memory.d: \
  Memory.cpp Common.h Memory.h Context.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Expr.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/util/Bits.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Expr.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/util/Bits.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/DataTypes.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/util/Ref.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/util/Ref.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/Casting.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/ADT/APInt.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/MathExtras.h \
@@ -21,11 +21,8 @@
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/raw_ostream.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/ADT/StringRef.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/ADT/StringExtras.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Solver.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/dimension.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/tinyxml.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/tinystr.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/util/BitArray.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Solver.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/util/BitArray.h \
  ObjectHolder.h MemoryManager.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Function.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/GlobalValue.h \
@@ -55,17 +52,17 @@ Memory.h:
 
 Context.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Expr.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Expr.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/util/Bits.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/util/Bits.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h:
 
 /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/DataTypes.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/util/Ref.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/util/Ref.h:
 
 /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/Casting.h:
 
@@ -95,15 +92,9 @@ Context.h:
 
 /home/bo/KleeWorkspace/llvm-2.9/include/llvm/ADT/StringExtras.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Solver.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Solver.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/dimension.h:
-
-/home/bo/workspace/MyKlee/klee-copy/include/klee/tinyxml.h:
-
-/home/bo/workspace/MyKlee/klee-copy/include/klee/tinystr.h:
-
-/home/bo/workspace/MyKlee/klee-copy/include/klee/util/BitArray.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/util/BitArray.h:
 
 ObjectHolder.h:
 

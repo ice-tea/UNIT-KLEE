@@ -1,8 +1,8 @@
-/home/bo/workspace/MyKlee/klee-copy/lib/Module/Release+Asserts/LowerSwitch.o \
- /home/bo/workspace/MyKlee/klee-copy/lib/Module/Release+Asserts/LowerSwitch.d: \
+/home/bo/workspace/klee-g/UNIT-KLEE/lib/Module/Release+Asserts/LowerSwitch.o \
+ /home/bo/workspace/klee-g/UNIT-KLEE/lib/Module/Release+Asserts/LowerSwitch.d: \
  LowerSwitch.cpp Passes.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Constants.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Constant.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/User.h \
@@ -62,9 +62,9 @@
 
 Passes.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h:
 
 /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Constants.h:
 

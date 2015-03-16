@@ -1,8 +1,8 @@
-/home/bo/workspace/MyKlee/klee-copy/lib/Core/Release+Asserts/ExternalDispatcher.o \
- /home/bo/workspace/MyKlee/klee-copy/lib/Core/Release+Asserts/ExternalDispatcher.d: \
+/home/bo/workspace/klee-g/UNIT-KLEE/lib/Core/Release+Asserts/ExternalDispatcher.o \
+ /home/bo/workspace/klee-g/UNIT-KLEE/lib/Core/Release+Asserts/ExternalDispatcher.d: \
  ExternalDispatcher.cpp ExternalDispatcher.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Module.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Function.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/GlobalValue.h \
@@ -72,9 +72,9 @@
 
 ExternalDispatcher.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h:
 
 /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Module.h:
 

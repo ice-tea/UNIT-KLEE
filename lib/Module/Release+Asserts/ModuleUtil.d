@@ -1,9 +1,9 @@
-/home/bo/workspace/MyKlee/klee-copy/lib/Module/Release+Asserts/ModuleUtil.o \
- /home/bo/workspace/MyKlee/klee-copy/lib/Module/Release+Asserts/ModuleUtil.d: \
+/home/bo/workspace/klee-g/UNIT-KLEE/lib/Module/Release+Asserts/ModuleUtil.o \
+ /home/bo/workspace/klee-g/UNIT-KLEE/lib/Module/Release+Asserts/ModuleUtil.d: \
  ModuleUtil.cpp \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Internal/Support/ModuleUtil.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Internal/Support/ModuleUtil.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h \
  ../Core/Common.h ../Core/SpecialFunctionHandler.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Function.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/GlobalValue.h \
@@ -67,11 +67,11 @@
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/PathV2.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/ADT/SmallString.h
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Internal/Support/ModuleUtil.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Internal/Support/ModuleUtil.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h:
 
 ../Core/Common.h:
 

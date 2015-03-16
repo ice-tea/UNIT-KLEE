@@ -36,8 +36,8 @@ declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 !llvm.dbg.lv.strcmp = !{!9, !10}
 
 !0 = metadata !{i32 589870, i32 0, metadata !1, metadata !"strcmp", metadata !"strcmp", metadata !"strcmp", metadata !1, i32 10, metadata !3, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 true, i32 (i8*, i8*)* @strcmp} ; [ DW_TAG_subprogram ]
-!1 = metadata !{i32 589865, metadata !"strcmp.c", metadata !"/home/bo/workspace/MyKlee/klee-copy/runtime/klee-libc/", metadata !2} ; [ DW_TAG_file_type ]
-!2 = metadata !{i32 589841, i32 0, i32 1, metadata !"strcmp.c", metadata !"/home/bo/workspace/MyKlee/klee-copy/runtime/klee-libc/", metadata !"4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2.9)", i1 true, i1 true, metadata !"", i32 0} ; [ DW_TAG_compile_unit ]
+!1 = metadata !{i32 589865, metadata !"strcmp.c", metadata !"/home/bo/workspace/klee-g/UNIT-KLEE/runtime/klee-libc/", metadata !2} ; [ DW_TAG_file_type ]
+!2 = metadata !{i32 589841, i32 0, i32 1, metadata !"strcmp.c", metadata !"/home/bo/workspace/klee-g/UNIT-KLEE/runtime/klee-libc/", metadata !"4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2.9)", i1 true, i1 true, metadata !"", i32 0} ; [ DW_TAG_compile_unit ]
 !3 = metadata !{i32 589845, metadata !1, metadata !"", metadata !1, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !4, i32 0, null} ; [ DW_TAG_subroutine_type ]
 !4 = metadata !{metadata !5, metadata !6, metadata !6}
 !5 = metadata !{i32 589860, metadata !1, metadata !"int", metadata !1, i32 0, i64 32, i64 32, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ]

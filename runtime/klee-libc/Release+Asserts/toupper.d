@@ -1,3 +1,3 @@
-/home/bo/workspace/MyKlee/klee-copy/runtime/klee-libc/Release+Asserts/toupper.o \
- /home/bo/workspace/MyKlee/klee-copy/runtime/klee-libc/Release+Asserts/toupper.d: \
+/home/bo/workspace/klee-g/UNIT-KLEE/runtime/klee-libc/Release+Asserts/toupper.o \
+ /home/bo/workspace/klee-g/UNIT-KLEE/runtime/klee-libc/Release+Asserts/toupper.d: \
  toupper.c

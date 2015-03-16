@@ -1,10 +1,10 @@
-/home/bo/workspace/MyKlee/klee-copy/lib/Core/Release+Asserts/CallPathManager.o \
- /home/bo/workspace/MyKlee/klee-copy/lib/Core/Release+Asserts/CallPathManager.d: \
+/home/bo/workspace/klee-g/UNIT-KLEE/lib/Core/Release+Asserts/CallPathManager.o \
+ /home/bo/workspace/klee-g/UNIT-KLEE/lib/Core/Release+Asserts/CallPathManager.d: \
  CallPathManager.cpp CallPathManager.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Statistics.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Statistic.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Statistics.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Statistic.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/DataTypes.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Function.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/GlobalValue.h \
@@ -35,13 +35,13 @@
 
 CallPathManager.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Statistics.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Statistics.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Statistic.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Statistic.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h:
 
 /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/DataTypes.h:
 

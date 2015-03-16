@@ -1,8 +1,8 @@
-/home/bo/workspace/MyKlee/klee-copy/lib/Module/Release+Asserts/Optimize.o \
- /home/bo/workspace/MyKlee/klee-copy/lib/Module/Release+Asserts/Optimize.d: \
+/home/bo/workspace/klee-g/UNIT-KLEE/lib/Module/Release+Asserts/Optimize.o \
+ /home/bo/workspace/klee-g/UNIT-KLEE/lib/Module/Release+Asserts/Optimize.d: \
  Optimize.cpp \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/PassManager.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Pass.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/PassSupport.h \
@@ -80,9 +80,9 @@
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/ErrorHandling.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/PluginLoader.h
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h:
 
 /home/bo/KleeWorkspace/llvm-2.9/include/llvm/PassManager.h:
 

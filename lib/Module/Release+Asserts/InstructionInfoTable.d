@@ -1,9 +1,9 @@
-/home/bo/workspace/MyKlee/klee-copy/lib/Module/Release+Asserts/InstructionInfoTable.o \
- /home/bo/workspace/MyKlee/klee-copy/lib/Module/Release+Asserts/InstructionInfoTable.d: \
+/home/bo/workspace/klee-g/UNIT-KLEE/lib/Module/Release+Asserts/InstructionInfoTable.o \
+ /home/bo/workspace/klee-g/UNIT-KLEE/lib/Module/Release+Asserts/InstructionInfoTable.d: \
  InstructionInfoTable.cpp \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Internal/Module/InstructionInfoTable.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h \
- /home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Internal/Module/InstructionInfoTable.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h \
+ /home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Function.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/GlobalValue.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Constant.h \
@@ -64,11 +64,11 @@
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Analysis/ValueTracking.h \
  /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Support/Debug.h
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Internal/Module/InstructionInfoTable.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Internal/Module/InstructionInfoTable.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/Version.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/Version.h:
 
-/home/bo/workspace/MyKlee/klee-copy/include/klee/Config/config.h:
+/home/bo/workspace/klee-g/UNIT-KLEE/include/klee/Config/config.h:
 
 /home/bo/KleeWorkspace/llvm-2.9/include/llvm/Function.h:
 
