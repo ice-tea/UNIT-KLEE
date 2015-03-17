@@ -65,10 +65,32 @@ namespace klee {
       tmp.insert(es);
       update(current, std::set<ExecutionState*>(), tmp);
     }
+    //libo
+    Executor &executor;
+    std::set<int> AllBlockLines;
+        void collectLines(){
+        	llvm::Module *M = executor.kmodule->module;
 
+        	    for(llvm::Module::iterator fit=M->begin(); fit!=M->end(); ++fit)
+        	    {
+        	        llvm::Function *F = fit;
+        	        //funcMap[F] = add_vertex(funcG);
+        					//std::cerr << "Add block in the function " << F->getName().str() << "\n";
+        	        for(llvm::Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
+        	        {
+        	            llvm::BasicBlock *BB = bbit;
+        	            //bbMap[BB] = add_vertex(bbG);
+        	            klee_message("collect lines\n");
+        	        }
+        	    }
+        }
+        //~
     enum CoreSearchType {
       DFS,
       BFS,
+	  //libo
+	  BCD,
+	  //~
       RandomState,
       RandomPath,
       NURS_CovNew,
@@ -107,7 +129,23 @@ namespace klee {
       os << "BFSSearcher\n";
     }
   };
+  //libo
+    class BranchCoverageSearcher : public Searcher {
+      Executor &executor;
+    public:
+      BranchCoverageSearcher(Executor &_executor);
+      ~BranchCoverageSearcher();
 
+      ExecutionState &selectState();
+      void update(ExecutionState *current,
+                      const std::set<ExecutionState*> &addedStates,
+                      const std::set<ExecutionState*> &removedStates);
+          bool empty();
+          void printName(llvm::raw_ostream &os) {
+            os << "BranchCoverageSearcher\n";
+          }
+    };
+    //~
   class RandomSearcher : public Searcher {
     std::vector<ExecutionState*> states;
 

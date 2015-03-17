@@ -3578,6 +3578,7 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
 	  AddSymbolicRef(state.symbolics[i].first->allocSite->getType(),
 			  state.symbolics[i].first->name ,values[i],res);
   }
+  /*
   klee_message("begin lines");
   std::map<const std::string*, std::set<unsigned> > lines = state.coveredLines;
   for(std::map<const std::string*, std::set<unsigned> >::iterator it = lines.begin(); it != lines.end(); it++)
@@ -3591,6 +3592,7 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
 	  }
   }
   klee_message("end lines");
+  */
   return true;
 }
 

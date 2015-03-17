@@ -85,6 +85,10 @@ class Executor : public Interpreter {
   friend class SpecialFunctionHandler;
   friend class StatsTracker;
 
+  //libo
+  friend class BranchCoverageSearcher;
+  //~
+
 public:
   class Timer {
   public:
