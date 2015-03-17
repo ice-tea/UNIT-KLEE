@@ -69,16 +69,16 @@ namespace klee {
     Executor &executor;
     std::set<int> AllBlockLines;
     void collectLines(){
-        Module *M = executor.kmodule->module;
+        llvm::Module *M = executor.kmodule->module;
 
-        for(Module::iterator fit=M->begin(); fit!=M->end(); ++fit)
+        for(llvm::Module::iterator fit=M->begin(); fit!=M->end(); ++fit)
         {
-                Function *F = fit;
+                llvm::Function *F = fit;
                 //funcMap[F] = add_vertex(funcG);
         				//std::cerr << "Add block in the function " << F->getName().str() << "\n";
-                for(Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
+                for(llvm::Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
                 {
-                    BasicBlock *BB = bbit;
+                    llvm::BasicBlock *BB = bbit;
                     //bbMap[BB] = add_vertex(bbG);
                     llvm::Instruction * i = BB->getFirstNonPHI();
                     if(i != NULL){
