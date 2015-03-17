@@ -98,7 +98,7 @@ namespace klee {
   };
 
   class BFSSearcher : public Searcher {
-    std::deque<ExecutionState*> states;
+	  std::vector<ExecutionState*> states;
 
   public:
     ExecutionState &selectState();
@@ -114,14 +114,12 @@ namespace klee {
     class BranchCoverageSearcher : public Searcher {
 	  std::deque<ExecutionState*> states;
     public:
-      BranchCoverageSearcher();
-      ~BranchCoverageSearcher();
 
       ExecutionState &selectState();
       void update(ExecutionState *current,
                       const std::set<ExecutionState*> &addedStates,
                       const std::set<ExecutionState*> &removedStates);
-          bool empty();
+      	  bool empty() { return states.empty(); }
           void printName(llvm::raw_ostream &os) {
             os << "BranchCoverageSearcher\n";
           }

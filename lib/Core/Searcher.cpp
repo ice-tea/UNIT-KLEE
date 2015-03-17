@@ -169,7 +169,6 @@ void BranchCoverageSearcher::update(ExecutionState *current,
          ie = removedStates.end(); it != ie; ++it) {
     ExecutionState *es = *it;
     bool ok = false;
-
     for (std::vector<ExecutionState*>::iterator it = states.begin(),
            ie = states.end(); it != ie; ++it) {
       if (es==*it) {
@@ -178,7 +177,6 @@ void BranchCoverageSearcher::update(ExecutionState *current,
         break;
       }
     }
-
     assert(ok && "invalid state removed");
   }
 }
