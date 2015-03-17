@@ -1349,7 +1349,7 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   KFunction *kf = state.stack.back().kf;
   unsigned entry = kf->basicBlockEntry[dst];
   //libo
-  klee_message("covere line:%d\n",dst->getFirstNonPHI()->getDebugLoc().getLine());
+  klee_message("--------covere line:%d\n",dst->getFirstNonPHI()->getDebugLoc().getLine());
   this->solver->addCoverageLine(dst->getFirstNonPHI()->getDebugLoc().getLine());
   //~
   state.pc = &kf->instructions[entry];
