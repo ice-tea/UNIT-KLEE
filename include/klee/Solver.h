@@ -63,6 +63,7 @@ namespace klee {
   -libo */
     //libo
     //libo
+  public:
       	  std::set<int> CoverageLines;
           std::set<int> AllBlockLines;
           void addBlockLine(int i){

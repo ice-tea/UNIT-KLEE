@@ -1372,7 +1372,7 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   KFunction *kf = state.stack.back().kf;
   unsigned entry = kf->basicBlockEntry[dst];
   //libo
-  this->solver->addCoverageLine(dst->getFirstNonPHI()->DbgLoc.getLine());
+  this->solver->addCoverageLine(dst->getFirstNonPHI()->getDebugLoc().getLine());
   //~
   state.pc = &kf->instructions[entry];
   if (state.pc->inst->getOpcode() == Instruction::PHI) {
@@ -3518,6 +3518,8 @@ void AddSymbolicRef(const Type* element_type,
 				   	   std::string,std::vector<unsigned char> > >&res){
 	//Libo break down the complex type
 	klee_message("In addSymbolicRef");
+	klee_message("%d blocks; %d covered\n", solver->CoverageLines.size(), solver->AllBlockLines.size());
+	klee_message("coverage pecent");
 	klee_message("xxxxxxxxxxxxxxxxxxxxxxxxx");
 	klee_message(element_type->getDescription().c_str());
 	if(element_type->isPointerTy()){
