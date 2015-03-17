@@ -112,8 +112,8 @@ private:
       std::set<int> AllBlockLines;
       void collectLines(){
           llvm::Module *M = kmodule->module;
-
-          for(llvm::Module::iterator fit=M->begin(); fit!=M->end(); ++fit)
+          llvm::Module::iterator fit;
+          for(fit=M->begin(); fit!=M->end(); ++fit)
           {
                   llvm::Function *F = fit;
                   //funcMap[F] = add_vertex(funcG);
