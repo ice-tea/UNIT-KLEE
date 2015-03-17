@@ -98,7 +98,7 @@ namespace klee {
   };
 
   class BFSSearcher : public Searcher {
-	  std::vector<ExecutionState*> states;
+    std::deque<ExecutionState*> states;
 
   public:
     ExecutionState &selectState();
@@ -112,8 +112,9 @@ namespace klee {
   };
   //libo
     class BranchCoverageSearcher : public Searcher {
-	  std::deque<ExecutionState*> states;
+	  std::vector<ExecutionState*> states;
     public:
+
 
       ExecutionState &selectState();
       void update(ExecutionState *current,
