@@ -3545,7 +3545,8 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                                    std::vector<unsigned char> > >
                                    &res) {
   //libo
-                llvm::Module *M = kmodule->module;
+          llvm::Module *M = kmodule->module;
+          if(M!=NULL){
                 llvm::Module::iterator fit;
                 for(fit=M->begin(); fit!=M->end(); ++fit)
                 {
@@ -3557,14 +3558,16 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                             llvm::BasicBlock *BB = bbit;
                             //bbMap[BB] = add_vertex(bbG);
                             llvm::Instruction * i = BB->getFirstNonPHI();
-                            if(i != NULL){
-                            	//this->solver->addBlockLine((int)i->getDebugLoc().getLine());
+                            if(i != NULL && i->getOpcode()==Instruction::Br){
+                            	this->solver->addBlockLine((int)i->getDebugLoc().getLine());
+
                             	//AllBlockLines.insert((int)i->getDebugLoc().getLine());
                             	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
                             }
                             klee_message("collect lines\n");
                         }
                 }
+          }
   //collectLines();
   //~
   solver->setTimeout(coreSolverTimeout);
