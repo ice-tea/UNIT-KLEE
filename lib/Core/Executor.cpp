@@ -3518,7 +3518,6 @@ void AddSymbolicRef(const Type* element_type,
 				   	   std::string,std::vector<unsigned char> > >&res){
 	//Libo break down the complex type
 	klee_message("In addSymbolicRef");
-	klee_message("%d blocks; %d covered\n", solver->CoverageLines.size(), solver->AllBlockLines.size());
 	klee_message("coverage pecent");
 	klee_message("xxxxxxxxxxxxxxxxxxxxxxxxx");
 	klee_message(element_type->getDescription().c_str());
@@ -3569,7 +3568,7 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                                    std::vector<unsigned char> > >
                                    &res) {
   solver->setTimeout(coreSolverTimeout);
-
+  klee_message("%d blocks; %d covered\n", this->solver->CoverageLines.size(), this->solver->AllBlockLines.size());
   ExecutionState tmp(state);
   if (!NoPreferCex) {
     for (unsigned i = 0; i != state.symbolics.size(); ++i) {
