@@ -125,8 +125,8 @@ private:
                       //bbMap[BB] = add_vertex(bbG);
                       llvm::Instruction * i = BB->getFirstNonPHI();
                       if(i != NULL){
-                      	AllBlockLines.insert((int)i->getDebugLoc());
-                      	klee_message("get line: %d\n", (int)i->getDebugLoc());
+                      	AllBlockLines.insert((int)i->getDebugLoc().getLine());
+                      	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
                       }
                       klee_message("collect lines\n");
                   }
