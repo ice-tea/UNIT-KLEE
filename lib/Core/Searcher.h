@@ -68,23 +68,28 @@ namespace klee {
     //libo
     Executor &executor;
     std::set<int> AllBlockLines;
-        void collectLines(){
-        	llvm::Module *M = executor.kmodule->module;
+    void collectLines(){
+        llvm::Module *M = executor.kmodule->module;
 
-        	    for(llvm::Module::iterator fit=M->begin(); fit!=M->end(); ++fit)
-        	    {
-        	        llvm::Function *F = fit;
-        	        //funcMap[F] = add_vertex(funcG);
-        					//std::cerr << "Add block in the function " << F->getName().str() << "\n";
-        	        for(llvm::Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
-        	        {
-        	            llvm::BasicBlock *BB = bbit;
-        	            //bbMap[BB] = add_vertex(bbG);
-        	            klee_message("collect lines\n");
-        	        }
-        	    }
+        for(llvm::Module::iterator fit=M->begin(); fit!=M->end(); ++fit)
+        {
+                llvm::Function *F = fit;
+                //funcMap[F] = add_vertex(funcG);
+        				//std::cerr << "Add block in the function " << F->getName().str() << "\n";
+                for(llvm::Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
+                {
+                    llvm::BasicBlock *BB = bbit;
+                    //bbMap[BB] = add_vertex(bbG);
+                    llvm::Instruction * i = BB->getFirstNonPHI();
+                    if(i != NULL){
+                    	AllBlockLines.insert((int)i->getDebugLoc());
+                    	klee_message("get line: %d\n", (int)i->getDebugLoc());
+                    }
+                    klee_message("collect lines\n");
+                }
         }
-        //~
+    }
+    //~
     enum CoreSearchType {
       DFS,
       BFS,
