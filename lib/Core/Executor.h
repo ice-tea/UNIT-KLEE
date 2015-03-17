@@ -111,31 +111,6 @@ private:
   InterpreterHandler *interpreterHandler;
   Searcher *searcher;
 
-  //libo
-  	  std::set<int> CoverageLines;
-      std::set<int> AllBlockLines;
-      void collectLines(){
-          llvm::Module *M = kmodule->module;
-          llvm::Module::iterator fit;
-          for(fit=M->begin(); fit!=M->end(); ++fit)
-          {
-                  llvm::Function *F = fit;
-                  //funcMap[F] = add_vertex(funcG);
-          				//std::cerr << "Add block in the function " << F->getName().str() << "\n";
-                  for(llvm::Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
-                  {
-                      llvm::BasicBlock *BB = bbit;
-                      //bbMap[BB] = add_vertex(bbG);
-                      llvm::Instruction * i = BB->getFirstNonPHI();
-                      if(i != NULL){
-                      	AllBlockLines.insert((int)i->getDebugLoc().getLine());
-                      	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
-                      }
-                      klee_message("collect lines\n");
-                  }
-          }
-      }
-      //~
   ExternalDispatcher *externalDispatcher;
   TimingSolver *solver;
   MemoryManager *memory;
@@ -434,14 +409,7 @@ public:
     return *interpreterHandler;
   }
 
-  //libo
-  void addCoverageLine(int i){
-	  CoverageLines.insert(i);
-  }
-  double getCoveragePre(){
-	  return CoverageLines.size()/AllBlockLines.size();
-  }
-  //~
+
   // XXX should just be moved out to utility module
   ref<klee::ConstantExpr> evalConstant(const llvm::Constant *c);
 

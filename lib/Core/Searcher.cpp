@@ -154,7 +154,35 @@ void RandomSearcher::update(ExecutionState *current,
     assert(ok && "invalid state removed");
   }
 }
+//libo
+ExecutionState &BranchCoverageSearcher::selectState() {
+  return *states[theRNG.getInt32()%states.size()];
+}
 
+void BranchCoverageSearcher::update(ExecutionState *current,
+                            const std::set<ExecutionState*> &addedStates,
+                            const std::set<ExecutionState*> &removedStates) {
+  states.insert(states.end(),
+                addedStates.begin(),
+                addedStates.end());
+  for (std::set<ExecutionState*>::const_iterator it = removedStates.begin(),
+         ie = removedStates.end(); it != ie; ++it) {
+    ExecutionState *es = *it;
+    bool ok = false;
+
+    for (std::vector<ExecutionState*>::iterator it = states.begin(),
+           ie = states.end(); it != ie; ++it) {
+      if (es==*it) {
+        states.erase(it);
+        ok = true;
+        break;
+      }
+    }
+
+    assert(ok && "invalid state removed");
+  }
+}
+//~
 ///
 
 WeightedRandomSearcher::WeightedRandomSearcher(WeightType _type)

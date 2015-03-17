@@ -112,9 +112,9 @@ namespace klee {
   };
   //libo
     class BranchCoverageSearcher : public Searcher {
-      Executor &executor;
+	  std::deque<ExecutionState*> states;
     public:
-      BranchCoverageSearcher(Executor &_executor);
+      BranchCoverageSearcher();
       ~BranchCoverageSearcher();
 
       ExecutionState &selectState();

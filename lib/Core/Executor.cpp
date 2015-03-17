@@ -341,7 +341,29 @@ Executor::Executor(const InterpreterOptions &opts,
   this->solver = new TimingSolver(solver, EqualitySubstitution);
 
   memory = new MemoryManager();
-  collectLines();
+  //libo
+                llvm::Module *M = kmodule->module;
+                llvm::Module::iterator fit;
+                for(fit=M->begin(); fit!=M->end(); ++fit)
+                {
+                        llvm::Function *F = fit;
+                        //funcMap[F] = add_vertex(funcG);
+                				//std::cerr << "Add block in the function " << F->getName().str() << "\n";
+                        for(llvm::Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
+                        {
+                            llvm::BasicBlock *BB = bbit;
+                            //bbMap[BB] = add_vertex(bbG);
+                            llvm::Instruction * i = BB->getFirstNonPHI();
+                            if(i != NULL){
+                            	this->solver->addBlockLine((int)i->getDebugLoc().getLine());
+                            	//AllBlockLines.insert((int)i->getDebugLoc().getLine());
+                            	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
+                            }
+                            klee_message("collect lines\n");
+                        }
+                }
+  //collectLines();
+  //~
 }
 
 
@@ -1349,6 +1371,9 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   // XXX this lookup has to go ?
   KFunction *kf = state.stack.back().kf;
   unsigned entry = kf->basicBlockEntry[dst];
+  //libo
+  this->solver->addCoverageLine(dst->getFirstNonPHI()->DbgLoc.getLine());
+  //~
   state.pc = &kf->instructions[entry];
   if (state.pc->inst->getOpcode() == Instruction::PHI) {
     PHINode *first = static_cast<PHINode*>(state.pc->inst);
@@ -1534,7 +1559,8 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       // up with convenient instruction specific data.
       if (statsTracker && state.stack.back().kf->trackCoverage)
         statsTracker->markBranchVisited(branches.first, branches.second);
-
+      //TODO:
+      //is all covered?
       if (branches.first)
         transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first);
       if (branches.second)
