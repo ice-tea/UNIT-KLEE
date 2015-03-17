@@ -62,23 +62,6 @@ namespace klee {
     void getDim(){std::cout<<"get Dimension!\n";}
   -libo */
     //libo
-    //libo
-  public:
-      	  std::set<int> CoverageLines;
-          std::set<int> AllBlockLines;
-          void addBlockLine(int i){
-        	  AllBlockLines.insert(i);
-          }
-          //libo
-            void addCoverageLine(int i){
-          	  CoverageLines.insert(i);
-            }
-            double getCoveragePre(){
-          	  return CoverageLines.size()/AllBlockLines.size();
-            }
-            //~
-          //~
-    //~
   public:
     enum Validity {
       True = 1,

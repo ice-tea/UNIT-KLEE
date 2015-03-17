@@ -38,6 +38,23 @@ namespace klee {
       delete solver;
     }
 
+    //libo
+      public:
+          	  std::set<int> CoverageLines;
+              std::set<int> AllBlockLines;
+              void addBlockLine(int i){
+            	  AllBlockLines.insert(i);
+              }
+              //libo
+                void addCoverageLine(int i){
+              	  CoverageLines.insert(i);
+                }
+                double getCoveragePre(){
+              	  return CoverageLines.size()/AllBlockLines.size();
+                }
+                //~
+              //~
+        //~
     void setTimeout(double t) {
       solver->setCoreSolverTimeout(t);
     }
