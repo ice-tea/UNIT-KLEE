@@ -1,4 +1,4 @@
-#define MAXL 6
+#define MAXL 3
 
 int foo(int x){
 

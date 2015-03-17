@@ -337,33 +337,10 @@ Executor::Executor(const InterpreterOptions &opts,
                          interpreterHandler->getOutputFilename(SOLVER_QUERIES_SMT2_FILE_NAME),
                          interpreterHandler->getOutputFilename(ALL_QUERIES_PC_FILE_NAME),
                          interpreterHandler->getOutputFilename(SOLVER_QUERIES_PC_FILE_NAME));
-  
+  klee_message("new solver\n");
   this->solver = new TimingSolver(solver, EqualitySubstitution);
 
   memory = new MemoryManager();
-  //libo
-                llvm::Module *M = kmodule->module;
-                llvm::Module::iterator fit;
-                for(fit=M->begin(); fit!=M->end(); ++fit)
-                {
-                        llvm::Function *F = fit;
-                        //funcMap[F] = add_vertex(funcG);
-                				//std::cerr << "Add block in the function " << F->getName().str() << "\n";
-                        for(llvm::Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
-                        {
-                            llvm::BasicBlock *BB = bbit;
-                            //bbMap[BB] = add_vertex(bbG);
-                            llvm::Instruction * i = BB->getFirstNonPHI();
-                            if(i != NULL){
-                            	this->solver->addBlockLine((int)i->getDebugLoc().getLine());
-                            	//AllBlockLines.insert((int)i->getDebugLoc().getLine());
-                            	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
-                            }
-                            klee_message("collect lines\n");
-                        }
-                }
-  //collectLines();
-  //~
 }
 
 
@@ -3567,8 +3544,31 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                                    std::pair<std::string,
                                    std::vector<unsigned char> > >
                                    &res) {
+  //libo
+                llvm::Module *M = kmodule->module;
+                llvm::Module::iterator fit;
+                for(fit=M->begin(); fit!=M->end(); ++fit)
+                {
+                        llvm::Function *F = fit;
+                        //funcMap[F] = add_vertex(funcG);
+                				//std::cerr << "Add block in the function " << F->getName().str() << "\n";
+                        for(llvm::Function::iterator bbit = F->begin(), bb_ie=F->end(); bbit != bb_ie; ++bbit)
+                        {
+                            llvm::BasicBlock *BB = bbit;
+                            //bbMap[BB] = add_vertex(bbG);
+                            llvm::Instruction * i = BB->getFirstNonPHI();
+                            if(i != NULL){
+                            	//this->solver->addBlockLine((int)i->getDebugLoc().getLine());
+                            	//AllBlockLines.insert((int)i->getDebugLoc().getLine());
+                            	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
+                            }
+                            klee_message("collect lines\n");
+                        }
+                }
+  //collectLines();
+  //~
   solver->setTimeout(coreSolverTimeout);
-  klee_message("%d blocks; %d covered\n", this->solver->CoverageLines.size(), this->solver->AllBlockLines.size());
+  klee_message("%d blocks; %d covered\n", this->solver->AllBlockLines.size(), this->solver->CoverageLines.size());
   ExecutionState tmp(state);
   if (!NoPreferCex) {
     for (unsigned i = 0; i != state.symbolics.size(); ++i) {

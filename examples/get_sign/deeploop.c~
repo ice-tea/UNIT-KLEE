@@ -1,0 +1,23 @@
+/*
+ * First KLEE tutorial: testing a small function
+ */
+
+#include <klee/klee.h>
+
+int get_sign(int x) {
+  int y = 1;
+  while (x > 0) {
+    y*=2;
+    if(y == 4)
+    return 0;
+  else
+    return 1; 
+    x--;
+  }
+} 
+
+int main() {
+  int a;
+  klee_make_symbolic(&a, sizeof(a), "a");
+  return get_sign(a);
+} 

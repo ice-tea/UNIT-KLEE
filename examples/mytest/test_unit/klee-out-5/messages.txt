@@ -4,8 +4,21 @@ KLEE: LB----> getting Memory Object
 
 KLEE: In addSymbolicRef
 KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
-KLEE: i32*
+KLEE: [3 x i32]*
 KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
 KLEE: In addSymbolicRef
 KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
 KLEE: i32
@@ -19,10 +32,16 @@ KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
 KLEE: i32
 KLEE: find a primitive with 4 size
 KLEE: begin lines
-KLEE: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_unit/two_input.c
-KLEE: 9
-KLEE: 14
-KLEE: 22
+KLEE: /home/bo/workspace/klee-g/UNIT-KLEE/examples/mytest/test_unit/bubble.c
+KLEE: 5
+KLEE: 6
+KLEE: 16
+KLEE: 17
+KLEE: 18
+KLEE: 34
+KLEE: 35
+KLEE: 36
+KLEE: 37
 KLEE: end lines
 KLEE: LB----> getting Memory Object
 
@@ -30,8 +49,21 @@ KLEE: LB----> getting Memory Object
 
 KLEE: In addSymbolicRef
 KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
-KLEE: i32*
+KLEE: [3 x i32]*
 KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
 KLEE: In addSymbolicRef
 KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
 KLEE: i32
@@ -45,14 +77,51 @@ KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
 KLEE: i32
 KLEE: find a primitive with 4 size
 KLEE: begin lines
-KLEE: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_unit/two_input.c
+KLEE: /home/bo/workspace/klee-g/UNIT-KLEE/examples/mytest/test_unit/bubble.c
 KLEE: 8
-KLEE: 9
+KLEE: 19
+KLEE: end lines
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [3 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: begin lines
+KLEE: /home/bo/workspace/klee-g/UNIT-KLEE/examples/mytest/test_unit/bubble.c
+KLEE: 19
 KLEE: 20
 KLEE: 21
-KLEE: 22
-KLEE: 
-KLEE: 0
+KLEE: 23
+KLEE: 24
+KLEE: 25
 KLEE: end lines
 KLEE: LB----> getting Memory Object
 
@@ -60,8 +129,21 @@ KLEE: LB----> getting Memory Object
 
 KLEE: In addSymbolicRef
 KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
-KLEE: i32*
+KLEE: [3 x i32]*
 KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
 KLEE: In addSymbolicRef
 KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
 KLEE: i32
@@ -75,7 +157,39 @@ KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
 KLEE: i32
 KLEE: find a primitive with 4 size
 KLEE: begin lines
-KLEE: /home/bo/workspace/MyKlee/klee-copy/examples/mytest/test_unit/two_input.c
-KLEE: 11
-KLEE: 12
+KLEE: end lines
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [3 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [3 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: begin lines
 KLEE: end lines

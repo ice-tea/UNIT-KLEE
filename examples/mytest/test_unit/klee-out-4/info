@@ -1,21 +1,18 @@
-klee two_input.o
-PID: 11150
-Started: 2015-01-06 13:28:36
+klee -search=dfs bubble.o
+PID: 7993
+Started: 2015-03-16 23:18:23
 BEGIN searcher description
-<InterleavedSearcher> containing 2 searchers:
-RandomPathSearcher
-WeightedRandomSearcher::CoveringNew
-</InterleavedSearcher>
+DFSSearcher
 END searcher description
-Finished: 2015-01-06 13:28:36
+Finished: 2015-03-16 23:18:23
 Elapsed: 00:00:00
-KLEE: done: explored paths = 3
-KLEE: done: avg. constructs per query = 25
-KLEE: done: total queries = 3
-KLEE: done: valid queries = 0
-KLEE: done: invalid queries = 3
-KLEE: done: query cex = 3
+KLEE: done: explored paths = 5
+KLEE: done: avg. constructs per query = 32
+KLEE: done: total queries = 9
+KLEE: done: valid queries = 3
+KLEE: done: invalid queries = 6
+KLEE: done: query cex = 9
 
-KLEE: done: total instructions = 60
-KLEE: done: completed paths = 3
-KLEE: done: generated tests = 3
+KLEE: done: total instructions = 145
+KLEE: done: completed paths = 5
+KLEE: done: generated tests = 5
