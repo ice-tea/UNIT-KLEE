@@ -1536,7 +1536,7 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       // up with convenient instruction specific data.
       if (statsTracker && state.stack.back().kf->trackCoverage)
         statsTracker->markBranchVisited(branches.first, branches.second);
-      //TODO:
+      //libo TODO:
       //is all covered?
       if (branches.first)
         transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first);
@@ -3557,13 +3557,25 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                         {
                             llvm::BasicBlock *BB = bbit;
                             //bbMap[BB] = add_vertex(bbG);
-                            llvm::Instruction * i = BB->getFirstNonPHI();
+                            //llvm::Instruction * i = BB->getFirstNonPHI();
+
+                            for(llvm::BasicBlock::iterator iit=BB->begin(), i_ie=BB->end(); iit!=i_ie; ++iit){
+                            	llvm::Instruction *i = *iit;
+                            	if(i != NULL && i->getOpcode()==Instruction::Br){
+                            		this->solver->addBlockLine((int)i->getDebugLoc().getLine());
+
+                            		//AllBlockLines.insert((int)i->getDebugLoc().getLine());
+                            		klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
+                            	}
+                            }
+                            /*
                             if(i != NULL && i->getOpcode()==Instruction::Br){
                             	this->solver->addBlockLine((int)i->getDebugLoc().getLine());
 
                             	//AllBlockLines.insert((int)i->getDebugLoc().getLine());
                             	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
                             }
+                            */
                             klee_message("collect lines\n");
                         }
                 }
