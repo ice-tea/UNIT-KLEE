@@ -1349,6 +1349,7 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   KFunction *kf = state.stack.back().kf;
   unsigned entry = kf->basicBlockEntry[dst];
   //libo
+  klee_message("covere line:%d\n",dst->getFirstNonPHI()->getDebugLoc().getLine());
   this->solver->addCoverageLine(dst->getFirstNonPHI()->getDebugLoc().getLine());
   //~
   state.pc = &kf->instructions[entry];
@@ -3560,7 +3561,7 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                             //llvm::Instruction * i = BB->getFirstNonPHI();
 
                             for(llvm::BasicBlock::iterator iit=BB->begin(), i_ie=BB->end(); iit!=i_ie; ++iit){
-                            	llvm::Instruction *i = *iit;
+                            	llvm::Instruction *i = iit;
                             	if(i != NULL && i->getOpcode()==Instruction::Br){
                             		this->solver->addBlockLine((int)i->getDebugLoc().getLine());
 
@@ -3576,7 +3577,7 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                             	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
                             }
                             */
-                            klee_message("collect lines\n");
+                            //klee_message("collect lines\n");
                         }
                 }
           }
