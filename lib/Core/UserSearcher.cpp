@@ -79,7 +79,7 @@ Searcher *getNewSearcher(Searcher::CoreSearchType type, Executor &executor) {
   switch (type) {
   case Searcher::DFS: searcher = new DFSSearcher(); break;
   case Searcher::BFS: searcher = new BFSSearcher(); break;
-  case Searcher::BCD: searcher = new BranchCoverageSearcher(); break;
+  case Searcher::BCD: searcher = new BranchCoverageSearcher(executor); break;
   case Searcher::RandomState: searcher = new RandomSearcher(); break;
   case Searcher::RandomPath: searcher = new RandomPathSearcher(executor); break;
   case Searcher::NURS_CovNew: searcher = new WeightedRandomSearcher(WeightedRandomSearcher::CoveringNew); break;

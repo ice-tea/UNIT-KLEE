@@ -341,6 +341,7 @@ Executor::Executor(const InterpreterOptions &opts,
   this->solver = new TimingSolver(solver, EqualitySubstitution);
 
   memory = new MemoryManager();
+  collectLines();
 }
 
 

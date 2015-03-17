@@ -112,6 +112,7 @@ private:
   Searcher *searcher;
 
   //libo
+  	  std::set<int> CoverageLines;
       std::set<int> AllBlockLines;
       void collectLines(){
           llvm::Module *M = kmodule->module;
@@ -433,6 +434,14 @@ public:
     return *interpreterHandler;
   }
 
+  //libo
+  void addCoverageLine(int i){
+	  CoverageLines.insert(i);
+  }
+  double getCoveragePre(){
+	  return CoverageLines.size()/AllBlockLines.size();
+  }
+  //~
   // XXX should just be moved out to utility module
   ref<klee::ConstantExpr> evalConstant(const llvm::Constant *c);
 
