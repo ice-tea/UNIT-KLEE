@@ -207,7 +207,7 @@ private:
   void updateStates(ExecutionState *current);
   void transferToBasicBlock(llvm::BasicBlock *dst, 
 			    llvm::BasicBlock *src,
-			    ExecutionState &state);
+			    ExecutionState &state, int edge_src);
 
   void callExternalFunction(ExecutionState &state,
                             KInstruction *target,

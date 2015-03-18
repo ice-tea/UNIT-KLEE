@@ -1334,7 +1334,7 @@ void Executor::executeCall(ExecutionState &state,
 }
 
 void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src, 
-                                    ExecutionState &state) {
+                                    ExecutionState &state, int edge_src) {
   // Note that in general phi nodes can reuse phi values from the same
   // block but the incoming value is the eval() result *before* the
   // execution of any phi nodes. this is pathological and doesn't
@@ -1351,9 +1351,9 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   KFunction *kf = state.stack.back().kf;
   unsigned entry = kf->basicBlockEntry[dst];
   //libo
-  klee_message("--------covere edge:%d to %d\n",src->getFirstNonPHI()->getDebugLoc().getLine(),
+  klee_message("--------covere edge:%d to %d\n",edge_src,
 		  dst->getFirstNonPHI()->getDebugLoc().getLine());
-  this->solver->addCoverageBranch(src->getFirstNonPHI()->getDebugLoc().getLine(),
+  this->solver->addCoverageBranch(edge_src,
 		  dst->getFirstNonPHI()->getDebugLoc().getLine());
 
   //~
@@ -1564,9 +1564,9 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       //this->solver->branch_more = this->solver->AllBranchLines.size() == this->solver->CoverageBranch.size();
       //is all covered?
       if (branches.first)
-        transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first);
+        transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first, bi->getDebugLoc().getLine(),);
       if (branches.second)
-        transferToBasicBlock(bi->getSuccessor(1), bi->getParent(), *branches.second);
+        transferToBasicBlock(bi->getSuccessor(1), bi->getParent(), *branches.second, bi->getDebugLoc().getLine(),);
     }
     break;
   }
