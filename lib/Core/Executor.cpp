@@ -3515,7 +3515,7 @@ void AddSymbolicRef(const Type* element_type,
 	//Libo break down the complex type
 	//klee_message("In addSymbolicRef");
 	//klee_message("xxxxxxxxxxxxxxxxxxxxxxxxx");
-	klee_message(element_type->getDescription().c_str());
+	//klee_message(element_type->getDescription().c_str());
 	if(element_type->isPointerTy()){
 		//klee_message("find a pointer type");
 		AddSymbolicRef(element_type->getContainedType(0),name,value,res);
