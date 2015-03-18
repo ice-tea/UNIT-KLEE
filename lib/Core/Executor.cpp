@@ -339,7 +339,9 @@ Executor::Executor(const InterpreterOptions &opts,
                          interpreterHandler->getOutputFilename(SOLVER_QUERIES_PC_FILE_NAME));
   klee_message("new solver\n");
   this->solver = new TimingSolver(solver, EqualitySubstitution);
-
+  //libo
+  this->solver->branch_more = false;
+  //~
   memory = new MemoryManager();
 }
 
