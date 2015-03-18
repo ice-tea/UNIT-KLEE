@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/bo/workspace/klee-g/UNIT-KLEE/examples/sort/bubble.c
+Line: 10
+assembly.ll line: 41
+Stack: 
+	#000000041 in bubble (v=8492336, n) at /home/bo/workspace/klee-g/UNIT-KLEE/examples/sort/bubble.c:10
+	#100000108 in main () at /home/bo/workspace/klee-g/UNIT-KLEE/examples/sort/bubble.c:24
+Info: 
+	address: 18446744068058792924
+	next: object at 140636346195904 of size 1536
+		MO3[1536] (no allocation info)
+	prev: object at 8493840 of size 8
+		MO27[8] allocated at bubble():  %v_addr = alloca i32*, align 8

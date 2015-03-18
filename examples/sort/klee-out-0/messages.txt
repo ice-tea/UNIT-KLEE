@@ -1,0 +1,287 @@
+KLEE: new solver
+
+KLEE: --------covere line:8
+
+KLEE: --------covere line:9
+
+KLEE: --------covere line:9
+
+KLEE: --------covere line:10
+
+KLEE: --------covere line:8
+
+KLEE: get line: 7
+
+KLEE: get line: 9
+
+KLEE: get line: 10
+
+KLEE: get line: 14
+
+KLEE: get line: 9
+
+KLEE: get line: 9
+
+KLEE: get line: 13
+
+KLEE: get line: 21
+
+KLEE: get line: 16
+
+KLEE: get line: 19
+
+KLEE: get line: 25
+
+KLEE: get line: 26
+
+KLEE: get line: 29
+
+KLEE: get line: 32
+
+KLEE: get line: 15
+
+KLEE: get line: 15
+
+KLEE: get line: 0
+
+KLEE: 14 blocks; 3 covered
+
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [6 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [6 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: get line: 7
+
+KLEE: get line: 9
+
+KLEE: get line: 10
+
+KLEE: get line: 14
+
+KLEE: get line: 9
+
+KLEE: get line: 9
+
+KLEE: get line: 13
+
+KLEE: get line: 21
+
+KLEE: get line: 16
+
+KLEE: get line: 19
+
+KLEE: get line: 25
+
+KLEE: get line: 26
+
+KLEE: get line: 29
+
+KLEE: get line: 32
+
+KLEE: get line: 15
+
+KLEE: get line: 15
+
+KLEE: get line: 0
+
+KLEE: 14 blocks; 3 covered
+
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [6 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [6 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: ERROR: /home/bo/workspace/klee-g/UNIT-KLEE/examples/sort/bubble.c:10: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: get line: 7
+
+KLEE: get line: 9
+
+KLEE: get line: 10
+
+KLEE: get line: 14
+
+KLEE: get line: 9
+
+KLEE: get line: 9
+
+KLEE: get line: 13
+
+KLEE: get line: 21
+
+KLEE: get line: 16
+
+KLEE: get line: 19
+
+KLEE: get line: 25
+
+KLEE: get line: 26
+
+KLEE: get line: 29
+
+KLEE: get line: 32
+
+KLEE: get line: 15
+
+KLEE: get line: 15
+
+KLEE: get line: 0
+
+KLEE: 14 blocks; 3 covered
+
+KLEE: LB----> getting Memory Object
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [6 x i32]*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: [6 x i32]
+KLEE: find an array type
+KLEE: looking for
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size

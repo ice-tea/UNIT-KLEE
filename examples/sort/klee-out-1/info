@@ -1,0 +1,21 @@
+klee bubble.o
+PID: 4413
+Started: 2015-03-18 16:33:43
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2015-03-18 16:33:50
+Elapsed: 00:00:07
+KLEE: done: explored paths = 154
+KLEE: done: avg. constructs per query = 188
+KLEE: done: total queries = 344
+KLEE: done: valid queries = 71
+KLEE: done: invalid queries = 273
+KLEE: done: query cex = 344
+
+KLEE: done: total instructions = 16547
+KLEE: done: completed paths = 154
+KLEE: done: generated tests = 154

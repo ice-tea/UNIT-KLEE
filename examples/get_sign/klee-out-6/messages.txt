@@ -1,0 +1,182 @@
+KLEE: new solver
+
+KLEE: get line: 8
+
+KLEE: collect lines
+
+KLEE: get line: 9
+
+KLEE: collect lines
+
+KLEE: get line: 11
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 13
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 21
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 16
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 19
+
+KLEE: collect lines
+
+KLEE: get line: 25
+
+KLEE: collect lines
+
+KLEE: get line: 26
+
+KLEE: collect lines
+
+KLEE: get line: 29
+
+KLEE: collect lines
+
+KLEE: get line: 32
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 15
+
+KLEE: collect lines
+
+KLEE: get line: 15
+
+KLEE: collect lines
+
+KLEE: get line: 0
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: 13 blocks; 2 covered
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
+KLEE: get line: 8
+
+KLEE: collect lines
+
+KLEE: get line: 9
+
+KLEE: collect lines
+
+KLEE: get line: 11
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 13
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 21
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 16
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 19
+
+KLEE: collect lines
+
+KLEE: get line: 25
+
+KLEE: collect lines
+
+KLEE: get line: 26
+
+KLEE: collect lines
+
+KLEE: get line: 29
+
+KLEE: collect lines
+
+KLEE: get line: 32
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: get line: 15
+
+KLEE: collect lines
+
+KLEE: get line: 15
+
+KLEE: collect lines
+
+KLEE: get line: 0
+
+KLEE: collect lines
+
+KLEE: collect lines
+
+KLEE: 13 blocks; 2 covered
+
+KLEE: LB----> getting Memory Object
+
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32*
+KLEE: find a pointer type
+KLEE: In addSymbolicRef
+KLEE: coverage pecent
+KLEE: xxxxxxxxxxxxxxxxxxxxxxxxx
+KLEE: i32
+KLEE: find a primitive with 4 size
