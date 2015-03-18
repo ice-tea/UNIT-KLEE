@@ -43,7 +43,7 @@ namespace klee {
           	  std::set<int> CoverageBranch;
               std::set<int> AllBranchLines;
               //static bool branch_flag = false;
-              static bool branch_more = false;
+              bool branch_more = false;
               void addBranchLine(int i){
             	  AllBranchLines.insert(i);
               }
