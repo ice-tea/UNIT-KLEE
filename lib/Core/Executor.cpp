@@ -1334,7 +1334,7 @@ void Executor::executeCall(ExecutionState &state,
 }
 
 void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src, 
-                                    ExecutionState &state, int edge_src =0) {
+                                    ExecutionState &state, int edge_src) {
   // Note that in general phi nodes can reuse phi values from the same
   // block but the incoming value is the eval() result *before* the
   // execution of any phi nodes. this is pathological and doesn't
