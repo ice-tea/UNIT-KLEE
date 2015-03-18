@@ -3513,8 +3513,8 @@ void AddSymbolicRef(const Type* element_type,
 				   std::vector<std::pair<
 				   	   std::string,std::vector<unsigned char> > >&res){
 	//Libo break down the complex type
-	klee_message("In addSymbolicRef");
-	klee_message("xxxxxxxxxxxxxxxxxxxxxxxxx");
+	//klee_message("In addSymbolicRef");
+	//klee_message("xxxxxxxxxxxxxxxxxxxxxxxxx");
 	klee_message(element_type->getDescription().c_str());
 	if(element_type->isPointerTy()){
 		//klee_message("find a pointer type");
@@ -3533,8 +3533,8 @@ void AddSymbolicRef(const Type* element_type,
 		}
 	}
 	else if(element_type->isArrayTy()){
-		klee_message("find an array type");
-		klee_message("looking for");
+		//klee_message("find an array type");
+		//klee_message("looking for");
 		const ArrayType* detail_type = cast<const ArrayType>(element_type);
 		for(int i=0;i<detail_type->getNumElements();i++){
 			char a[10];
@@ -3546,7 +3546,7 @@ void AddSymbolicRef(const Type* element_type,
 	else{
 		//get size? add modify value
 		int byte_size = element_type->getPrimitiveSizeInBits()/8;
-		klee_message("find a primitive with %d size", byte_size);
+		//klee_message("find a primitive with %d size", byte_size);
 		std::vector<unsigned char> this_value;
 		for(int i=0; i<byte_size; i++){
 			this_value.push_back(value.front());
@@ -3602,13 +3602,14 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
   //collectLines();
   //~
   solver->setTimeout(coreSolverTimeout);
+  klee_message("XXXXXXXXXXXXXXXXX\n");
   klee_message("%d blocks; %d covered\n", this->solver->AllBranchLines.size(), this->solver->CoverageBranch.size());
   klee_message("coverage pecent%f\n", this->solver->getCoveragePre());
   ExecutionState tmp(state);
   if (!NoPreferCex) {
     for (unsigned i = 0; i != state.symbolics.size(); ++i) {
 
-      klee_message("LB----> getting Memory Object\n");
+      //klee_message("LB----> getting Memory Object\n");
       const MemoryObject *mo = state.symbolics[i].first;
       //klee_message(mo->allocSite->getType()->getDescription().c_str());
       std::vector< ref<Expr> >::const_iterator pi = 
