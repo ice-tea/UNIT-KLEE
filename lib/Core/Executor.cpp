@@ -1538,6 +1538,10 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       if (statsTracker && state.stack.back().kf->trackCoverage)
         statsTracker->markBranchVisited(branches.first, branches.second);
       //libo TODO:
+      klee_message("get branch line: %d\n", (int)bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
+      klee_message("get branch line: %d\n", (int)bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
+      this->solver->addBlockLine(bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
+      this->solver->addBlockLine(bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
       //is all covered?
       if (branches.first)
         transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first);
@@ -3545,7 +3549,7 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                                    std::pair<std::string,
                                    std::vector<unsigned char> > >
                                    &res) {
-  //libo
+  /*libo
           llvm::Module *M = kmodule->module;
           if(M!=NULL){
                 llvm::Module::iterator fit;
@@ -3569,18 +3573,19 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
                             		klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
                             	}
                             }
-                            /*
+
                             if(i != NULL && i->getOpcode()==Instruction::Br){
                             	this->solver->addBlockLine((int)i->getDebugLoc().getLine());
 
                             	//AllBlockLines.insert((int)i->getDebugLoc().getLine());
                             	klee_message("get line: %d\n", (int)i->getDebugLoc().getLine());
                             }
-                            */
+
                             //klee_message("collect lines\n");
                         }
                 }
           }
+      */
   //collectLines();
   //~
   solver->setTimeout(coreSolverTimeout);
