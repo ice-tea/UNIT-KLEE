@@ -1546,6 +1546,9 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       this->solver->addBranchLine(bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
       this->solver->addBranchLine(bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
       this->solver->branch_more = this->solver->AllBranchLines.size() == this->solver->CoverageBranch.size();
+
+      klee_message("branches: %d\n", (int)this->solver->AllBranchLines.size());
+      klee_message("covered: %d\n", (int)this->solver->CoverageBranch.size());
       if(this->solver->branch_more)
     	  klee_message("uncovered all!!\n");
       if(!this->solver->branch_more)
