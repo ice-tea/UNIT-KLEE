@@ -38,18 +38,32 @@ namespace klee {
       delete solver;
     }
 
+    struct MyEdge{
+    	int from;
+    	int to;
+    	MyEdge(int a,int b){
+    		from =a;
+    		to = b;
+    	}
+    	void tostring(){
+    		char s[50];
+    		sprintf(s, "%d to %d", from,to);
+    	}
+    };
     //libo
       public:
-          	  std::set<int> CoverageBranch;
-              std::set<int> AllBranchLines;
+          	  std::set<MyEdge> CoverageBranch;
+              std::set<MyEdge> AllBranchLines;
               //static bool branch_flag = false;
               bool branch_more = false;
-              void addBranchLine(int i){
-            	  AllBranchLines.insert(i);
+              void addBranchLine(int i,int j){
+            	  MyEdge e(i,j);
+            	  AllBranchLines.insert(e);
               }
               //libo
-                void addCoverageBranch(int i){
-                	CoverageBranch.insert(i);
+                void addCoverageBranch(int i,int j){
+                	MyEdge e(i,j);
+                	CoverageBranch.insert(e);
                 }
                 double getCoveragePre(){
               	  return CoverageBranch.size()/AllBranchLines.size();

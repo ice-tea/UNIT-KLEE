@@ -1351,8 +1351,10 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   KFunction *kf = state.stack.back().kf;
   unsigned entry = kf->basicBlockEntry[dst];
   //libo
-  klee_message("--------covere line:%d\n",dst->getFirstNonPHI()->getDebugLoc().getLine());
-  this->solver->addCoverageBranch(dst->getFirstNonPHI()->getDebugLoc().getLine());
+  klee_message("--------covere edge:%d to %d\n",src->getFirstNonPHI()->getDebugLoc().getLine(),
+		  dst->getFirstNonPHI()->getDebugLoc().getLine());
+  this->solver->addCoverageBranch(src->getFirstNonPHI()->getDebugLoc().getLine(),
+		  dst->getFirstNonPHI()->getDebugLoc().getLine());
 
   //~
   state.pc = &kf->instructions[entry];
@@ -1541,10 +1543,14 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       if (statsTracker && state.stack.back().kf->trackCoverage)
         statsTracker->markBranchVisited(branches.first, branches.second);
       //libo TODO:
-      klee_message("get branch line: %d\n", (int)bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
-      klee_message("get branch line: %d\n", (int)bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
-      this->solver->addBranchLine(bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
-      this->solver->addBranchLine(bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
+      klee_message("get edge: %d to %d\n", (int)bi->getDebugLoc().getLine(),
+    		  (int)bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
+      klee_message("get edge: %d to %d\n",(int)bi->getDebugLoc().getLine(),
+    		  (int)bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
+      this->solver->addBranchLine(bi->getDebugLoc().getLine(),
+    		  bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
+      this->solver->addBranchLine(bi->getDebugLoc().getLine(),
+    		  bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
 
 
       this->solver->branch_more = this->solver->AllBranchLines.size() != this->solver->CoverageBranch.size();
