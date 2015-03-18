@@ -40,17 +40,19 @@ namespace klee {
 
     //libo
       public:
-          	  std::set<int> CoverageLines;
-              std::set<int> AllBlockLines;
-              void addBlockLine(int i){
-            	  AllBlockLines.insert(i);
+          	  std::set<int> CoverageBranch;
+              std::set<int> AllBranchLines;
+              //static bool branch_flag = false;
+              static bool branch_more = false;
+              void addBranchLine(int i){
+            	  AllBranchLines.insert(i);
               }
               //libo
-                void addCoverageLine(int i){
-              	  CoverageLines.insert(i);
+                void addCoverageBranch(int i){
+                	CoverageBranch.insert(i);
                 }
                 double getCoveragePre(){
-              	  return CoverageLines.size()/AllBlockLines.size();
+              	  return CoverageBranch.size()/AllBranchLines.size();
                 }
                 //~
               //~

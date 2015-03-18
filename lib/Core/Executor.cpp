@@ -1350,7 +1350,9 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   unsigned entry = kf->basicBlockEntry[dst];
   //libo
   klee_message("--------covere line:%d\n",dst->getFirstNonPHI()->getDebugLoc().getLine());
-  this->solver->addCoverageLine(dst->getFirstNonPHI()->getDebugLoc().getLine());
+  this->solver->addCoverageBranch(dst->getFirstNonPHI()->getDebugLoc().getLine());
+  if(!this->solver->branch_more)
+	  haltExecution = true;
   //~
   state.pc = &kf->instructions[entry];
   if (state.pc->inst->getOpcode() == Instruction::PHI) {
@@ -1540,8 +1542,10 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       //libo TODO:
       klee_message("get branch line: %d\n", (int)bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
       klee_message("get branch line: %d\n", (int)bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
-      this->solver->addBlockLine(bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
-      this->solver->addBlockLine(bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
+      this->solver->addBranchLine(bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
+      this->solver->addBranchLine(bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
+      this->solver->branch_more = this->solver->AllBranchLines.size() == this->solver->CoverageBranch.size();
+
       //is all covered?
       if (branches.first)
         transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first);
@@ -3500,19 +3504,18 @@ void AddSymbolicRef(const Type* element_type,
 				   	   std::string,std::vector<unsigned char> > >&res){
 	//Libo break down the complex type
 	klee_message("In addSymbolicRef");
-	klee_message("coverage pecent");
 	klee_message("xxxxxxxxxxxxxxxxxxxxxxxxx");
 	klee_message(element_type->getDescription().c_str());
 	if(element_type->isPointerTy()){
-		klee_message("find a pointer type");
+		//klee_message("find a pointer type");
 		AddSymbolicRef(element_type->getContainedType(0),name,value,res);
 	}
 	else if(element_type->isStructTy()){
-		klee_message("size is %d", value.size());
-		klee_message("find a struct type");
-		klee_message("looking for");
+		//klee_message("size is %d", value.size());
+		//klee_message("find a struct type");
+		//klee_message("looking for");
 		for(int i=0;i<element_type->getNumContainedTypes() ;i++){
-			klee_message(element_type->getContainedType(0)->getDescription().c_str());
+			//klee_message(element_type->getContainedType(0)->getDescription().c_str());
 			char a[10];
 			std::sprintf (a,"%d",i);
 			AddSymbolicRef(element_type->getContainedType(i),
@@ -3589,7 +3592,8 @@ bool Executor::getSymbolicSolution(const ExecutionState &state,
   //collectLines();
   //~
   solver->setTimeout(coreSolverTimeout);
-  klee_message("%d blocks; %d covered\n", this->solver->AllBlockLines.size(), this->solver->CoverageLines.size());
+  klee_message("%d blocks; %d covered\n", this->solver->AllBranchLines.size(), this->solver->CoverageBranch.size());
+  klee_message("coverage pecent%f\n", this->solver->getCoveragePre());
   ExecutionState tmp(state);
   if (!NoPreferCex) {
     for (unsigned i = 0; i != state.symbolics.size(); ++i) {
