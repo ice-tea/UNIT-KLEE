@@ -43,8 +43,10 @@ namespace klee {
     struct MyEdge{
     	int from;
     	int to;
-    	bool operator == (const MyEdge &r) const{
-    		return from==r.from &&to==r.to;
+    	bool operator < (const MyEdge &r) const{
+    		if (from<r.from) return true;
+    		else if(from==r.from) return to<r.to;
+    		else return false;
     	}
     	MyEdge(int a,int b){
     		from =a;
