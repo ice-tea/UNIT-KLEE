@@ -10,6 +10,8 @@
 #ifndef KLEE_TIMINGSOLVER_H
 #define KLEE_TIMINGSOLVER_H
 
+#include "Common.h"
+
 #include "klee/Expr.h"
 #include "klee/Solver.h"
 
@@ -48,9 +50,8 @@ namespace klee {
     		from =a;
     		to = b;
     	}
-    	void tostring(){
-    		char s[50];
-    		sprintf(s, "%d to %d", from,to);
+    	void print(){
+    		klee_message("%d to %d", from,to);
     	}
     };
     //libo
