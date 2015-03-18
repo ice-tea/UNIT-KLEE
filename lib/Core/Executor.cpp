@@ -1353,8 +1353,7 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   //libo
   klee_message("--------covere line:%d\n",dst->getFirstNonPHI()->getDebugLoc().getLine());
   this->solver->addCoverageBranch(dst->getFirstNonPHI()->getDebugLoc().getLine());
-  if(!this->solver->branch_more)
-	  haltExecution = true;
+
   //~
   state.pc = &kf->instructions[entry];
   if (state.pc->inst->getOpcode() == Instruction::PHI) {
@@ -1547,7 +1546,10 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       this->solver->addBranchLine(bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
       this->solver->addBranchLine(bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
       this->solver->branch_more = this->solver->AllBranchLines.size() == this->solver->CoverageBranch.size();
-
+      if(this->solver->branch_more)
+    	  klee_message("uncovered all!!\n");
+      if(!this->solver->branch_more)
+    	  haltExecution = true;
       //is all covered?
       if (branches.first)
         transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first);
