@@ -1545,7 +1545,9 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       klee_message("get branch line: %d\n", (int)bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
       this->solver->addBranchLine(bi->getSuccessor(0)->getFirstNonPHI()->getDebugLoc().getLine());
       this->solver->addBranchLine(bi->getSuccessor(1)->getFirstNonPHI()->getDebugLoc().getLine());
-      this->solver->branch_more = this->solver->AllBranchLines.size() == this->solver->CoverageBranch.size();
+
+
+      this->solver->branch_more = this->solver->AllBranchLines.size() != this->solver->CoverageBranch.size();
 
       klee_message("branches: %d\n", (int)this->solver->AllBranchLines.size());
       klee_message("covered: %d\n", (int)this->solver->CoverageBranch.size());
@@ -1553,6 +1555,7 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
     	  klee_message("uncovered all!!\n");
       if(!this->solver->branch_more)
     	  haltExecution = true;
+      //this->solver->branch_more = this->solver->AllBranchLines.size() == this->solver->CoverageBranch.size();
       //is all covered?
       if (branches.first)
         transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first);
