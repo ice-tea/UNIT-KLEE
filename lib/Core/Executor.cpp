@@ -1334,7 +1334,7 @@ void Executor::executeCall(ExecutionState &state,
 }
 
 void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src, 
-                                    ExecutionState &state, int edge_src) {
+                                    ExecutionState &state, int edge_src =0) {
   // Note that in general phi nodes can reuse phi values from the same
   // block but the incoming value is the eval() result *before* the
   // execution of any phi nodes. this is pathological and doesn't
@@ -1351,10 +1351,12 @@ void Executor::transferToBasicBlock(BasicBlock *dst, BasicBlock *src,
   KFunction *kf = state.stack.back().kf;
   unsigned entry = kf->basicBlockEntry[dst];
   //libo
-  klee_message("--------covere edge:%d to %d\n",edge_src,
-		  dst->getFirstNonPHI()->getDebugLoc().getLine());
-  this->solver->addCoverageBranch(edge_src,
-		  dst->getFirstNonPHI()->getDebugLoc().getLine());
+  if(edge_src != 0){
+	  klee_message("--------covere edge:%d to %d\n",edge_src,
+	  		  dst->getFirstNonPHI()->getDebugLoc().getLine());
+	    this->solver->addCoverageBranch(edge_src,
+	  		  dst->getFirstNonPHI()->getDebugLoc().getLine());
+  }
 
   //~
   state.pc = &kf->instructions[entry];
@@ -1564,9 +1566,9 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
       //this->solver->branch_more = this->solver->AllBranchLines.size() == this->solver->CoverageBranch.size();
       //is all covered?
       if (branches.first)
-        transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first, bi->getDebugLoc().getLine(),);
+        transferToBasicBlock(bi->getSuccessor(0), bi->getParent(), *branches.first, bi->getDebugLoc().getLine());
       if (branches.second)
-        transferToBasicBlock(bi->getSuccessor(1), bi->getParent(), *branches.second, bi->getDebugLoc().getLine(),);
+        transferToBasicBlock(bi->getSuccessor(1), bi->getParent(), *branches.second, bi->getDebugLoc().getLine());
     }
     break;
   }
@@ -1587,7 +1589,7 @@ void Executor::executeInstruction(ExecutionState &state, KInstruction *ki) {
 #else
       unsigned index = si->findCaseValue(ci);
 #endif
-      transferToBasicBlock(si->getSuccessor(index), si->getParent(), state);
+      transferToBasicBlock(si->getSuccessor(index), si->getParent(), state, si->getDebugLoc().getLine());
     } else {
       std::map<BasicBlock*, ref<Expr> > targets;
       ref<Expr> isDefault = ConstantExpr::alloc(1, Expr::Bool);
