@@ -78,6 +78,9 @@ static SpecialFunctionHandler::HandlerInfo handlerInfo[] = {
   add("klee_get_errno", handleGetErrno, true),
   add("klee_is_symbolic", handleIsSymbolic, true),
   add("klee_make_symbolic", handleMakeSymbolic, false),
+  //libo
+  add("klee_make_unit", klee_make_unit, false),
+  //-
   add("klee_mark_global", handleMarkGlobal, false),
   add("klee_merge", handleMerge, false),
   add("klee_prefer_cex", handlePreferCex, false),
@@ -700,6 +703,9 @@ void SpecialFunctionHandler::handleMakeSymbolic(ExecutionState &state,
       return;
     } 
 
+    //libo
+    executor.solver->solver->addCons();
+    //-
     // FIXME: Type coercion should be done consistently somewhere.
     bool res;
     bool success =
