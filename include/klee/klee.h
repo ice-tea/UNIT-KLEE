@@ -32,14 +32,14 @@ extern "C" {
   /// be the entire contents of the object.
   /// \arg name - An optional name, used for identifying the object in messages,
   /// output files, etc.
-  void klee_make_symbolic(void *addr, size_t nbytes, const char *name);
+  void klee_make_symbolic(void *addr, size_t nbytes, const char *name, const char *unit ="");
 
   /// klee_make_unit - Make the contents of the object pointer to by \arg
     ///  unit information.
     ///
     /// \arg name - var name.
     /// \arg nbytes - unit name.
-    void klee_make_unit(const char *name, const char *unit);
+    //void klee_make_unit(const char *name, const char *unit);
 
   /// klee_range - Construct a symbolic value in the signed interval
   /// [begin,end).
